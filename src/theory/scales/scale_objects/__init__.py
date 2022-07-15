@@ -1,0 +1,1 @@
+from .minor import MinorScale
