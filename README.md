@@ -22,3 +22,5 @@ E------------------------------------
 - [ ] Django Web Application with Visualized Frontend
 - [ ] Backend API
 - [ ] Implement Instruments
+- [ ] Automatically generate Riffs, Solos
+- [ ] SLASH implementation
