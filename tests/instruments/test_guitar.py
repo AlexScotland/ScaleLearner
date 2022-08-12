@@ -19,6 +19,12 @@ def test_creating_guitar_with_drop_tuning():
     assert guitar.strings[tuning[0]][7].note == settings.STRING_TUNE[1].note
     assert guitar.strings[tuning[0]][7].octave == settings.STRING_TUNE[1].octave
 
+def test_get_all_e_notes():
+    guitar = Guitar()
+    e = Note("E", 2)
+    guitar_neck_with_e = guitar.get_all_note_positions(e)
+    print(guitar_neck_with_e)
+
 def generate_guitar_neck():
     guitar = Guitar()
-    assert isinstance(guitar.generate_guitar_neck(), str)
+    assert isinstance(guitar.generate_guitar_neck(guitar.strings), str)
