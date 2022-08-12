@@ -1,7 +1,6 @@
-from tkinter import ALL
 from src.theory.models import Note
 from src.theory.settings import ALL_NOTES
-from math import log2, pow
+from math import pow
 
 def generate_frequency(note : Note) -> int:
     """
@@ -32,6 +31,12 @@ def get_half_steps_between_notes(note1: Note, note2: Note) -> int:
 def get_note_from_piano_roll(note: Note) -> int:
     for index in range(len(ALL_NOTES)):
         if ALL_NOTES[index] == note.note:
+            return index
+    return None
+
+def get_established_note_index_from_piano_roll(piano_roll: list, note: Note) -> int:
+    for index in range(len(piano_roll)):
+        if compare_notes(piano_roll[index], note):
             return index
     return None
 
