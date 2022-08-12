@@ -1,1 +1,1 @@
-from controller import Guitar
+from .guitar import Guitar

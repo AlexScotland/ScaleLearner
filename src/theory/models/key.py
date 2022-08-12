@@ -1,5 +1,4 @@
 from src.theory.interfaces import IKey
-from src.theory.factories import NoteFactory
 from src.theory.models import Note, Chord
 from src.theory.helpers import *
 
@@ -10,9 +9,9 @@ class Key(IKey):
         self.chord_steps = chord_steps
         self.notes = None
 
-    def get_notes_in_key(self, root_note: Note):
+    def get_notes_in_key(self, root_note: Note, note_factory):
         notes = []
-        piano = NoteFactory.create_piano_roll()
+        piano = note_factory.create_piano_roll()
         root_note_index = get_established_note_index_from_piano_roll(piano, get_note_from_established_piano_roll(piano, root_note))
         notes.append(piano[root_note_index])
         last_note = root_note_index
@@ -21,7 +20,7 @@ class Key(IKey):
             last_note += step
         return notes
 
-    def create_chord_from_root_note(self, root_note: Note):
-        piano = NoteFactory.create_piano_roll()
+    def create_chord_from_root_note(self, root_note: Note, note_factory):
+        piano = note_factory.create_piano_roll()
         root_note_index = get_note_from_piano_roll(get_note_from_established_piano_roll(piano, root_note))
         return Chord(piano[root_note_index], piano[root_note_index + self.chord_steps[0]], piano[root_note_index + self.chord_steps[1]])
