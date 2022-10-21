@@ -1,0 +1,14 @@
+version: '3'
+services:
+    gbot:
+      build: 
+        context: ./build
+        dockerfile: guitar_bot
+      ports:
+        - "1337:80"
+      networks:
+        - audioNetwork
+      volumes:
+        - "./src:/src"
+networks:
+  audioNetwork:

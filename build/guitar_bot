@@ -1,0 +1,10 @@
+FROM ruby:2.5
+
+# throw errors if Gemfile has been modified since Gemfile.lock
+RUN bundle config --global frozen 1
+RUN gem install tesla_api
+WORKDIR /usr/src/app
+COPY ./test .
+# RUN bundle install 
+
+CMD tail -f /dev/null
