@@ -1,10 +1,15 @@
-FROM ruby:2.5
+FROM python:3.9.9
 
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
-RUN gem install tesla_api
-WORKDIR /usr/src/app
-COPY ./test .
-# RUN bundle install 
+WORKDIR /app/webserver
+
+# Update apt-get
+RUN apt-get update
+
+# Install dependencies
+# RUN apt-get install -y software-properties-common
+
+COPY requirements.txt .
+
+RUN pip3 install -r requirements.txt
 
 CMD tail -f /dev/null
