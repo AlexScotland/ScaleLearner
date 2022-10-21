@@ -2,6 +2,8 @@ FROM python:3.9.9
 
 WORKDIR /app/webserver
 
+EXPOSE 5000
+
 # Update apt-get
 RUN apt-get update
 
@@ -13,4 +15,5 @@ COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
 # CMD tail -f /dev/null
-CMD flask run
+ENTRYPOINT [ "flask"]
+CMD [ "run", "--host", "0.0.0.0" ]
