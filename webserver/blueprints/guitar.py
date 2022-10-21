@@ -4,7 +4,7 @@ from src.theory.models import Note, Chord
 
 guitar_blueprint = Blueprint('api', __name__, url_prefix='/api')
 
-@guitar_blueprint.route('/guitar', methods=['GET'])
+@guitar_blueprint.route('/guitar/', methods=['GET'])
 def guitar():
     guitar = APIGuitar()
     e = Note("E", 2)
