@@ -23,6 +23,8 @@ def test_get_all_e_notes_with_standard_tuning():
     guitar = Guitar()
     e = Note("E", 2)
     guitar_neck_with_e = guitar.get_all_note_positions(e)
+    print("")
+    print("All E Positions in Standard Tuning")
     print(guitar_neck_with_e)
 
 def test_get_all_e_notes_with_drop_tuning():
@@ -30,14 +32,16 @@ def test_get_all_e_notes_with_drop_tuning():
     guitar = Guitar(tuning, 15)
     e = Note("E", 2)
     guitar_neck_with_e = guitar.get_all_note_positions(e)
+    print("All E Positions in Drop D")
     print(guitar_neck_with_e)
 
 def test_get_all_e_chords_with_standard_tuning():
     guitar = Guitar()
     e_chord = Chord(Note("E", 2), Note("B", 2), Note("E", 3))
     e_chords = guitar.get_all_notes_in_chord_positions(e_chord)
+    print("All E Chords (E, B, E)")
     print(e_chords)
-    
+
 def generate_guitar_neck():
     guitar = Guitar()
     assert isinstance(guitar.generate_guitar_neck(guitar.strings), str)
