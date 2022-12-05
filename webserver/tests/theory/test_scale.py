@@ -1,6 +1,6 @@
 import pytest
-from src.theory.models import Scale, Note, Key
-from src.theory.factories import ScaleFactory, NoteFactory
+from webserver.src.theory.models import Scale, Note, Key
+from webserver.src.theory.factories import ScaleFactory, NoteFactory
 
 
 def test_create_major_scale_without_scale_object():

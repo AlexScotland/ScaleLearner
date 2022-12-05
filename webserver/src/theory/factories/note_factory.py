@@ -1,5 +1,5 @@
-from src.theory.models import Note
-from src.theory.settings import ALL_NOTES
+from webserver.src.theory.models import Note
+from webserver.src.theory.settings import ALL_NOTES
 
 class NoteFactory():
     

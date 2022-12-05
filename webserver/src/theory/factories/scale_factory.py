@@ -1,6 +1,6 @@
-from src.theory.models import Scale, Note
-from src.theory.factories import NoteFactory
-from src.theory.interfaces import IKey
+from webserver.src.theory.models import Scale, Note
+from webserver.src.theory.factories import NoteFactory
+from webserver.src.theory.interfaces import IKey
 
 class ScaleFactory():
 

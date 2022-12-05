@@ -1,8 +1,8 @@
 from numpy import full
 import pytest
-from src.theory.helpers import *
-from src.theory.models import Note
-from src.theory.factories import NoteFactory
+from webserver.src.theory.helpers import *
+from webserver.src.theory.models import Note
+from webserver.src.theory.factories import NoteFactory
 
 def test_correct_compare_notes():
     note1 = Note("A", 4, None)

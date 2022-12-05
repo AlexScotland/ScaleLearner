@@ -1,6 +1,6 @@
 import pytest
-from src.theory.factories import NoteFactory
-from src.theory.models import Note
+from webserver.src.theory.factories import NoteFactory
+from webserver.src.theory.models import Note
 
 def test_creation_of_piano_roll():
     piano_roll = NoteFactory.create_piano_roll()

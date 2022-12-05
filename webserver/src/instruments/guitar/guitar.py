@@ -1,7 +1,7 @@
-from src.instruments.interfaces import Instrument
-from src.theory.factories import NoteFactory
-from src.theory.models import Chord
-from src.theory.helpers import *
+from webserver.src.instruments.interfaces import Instrument
+from webserver.src.theory.factories import NoteFactory
+from webserver.src.theory.models import Chord
+from webserver.src.theory.helpers import *
 from .settings import *
 
 class Guitar(Instrument):

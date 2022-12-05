@@ -1,5 +1,5 @@
-from src.instruments.guitar import Guitar
-from src.theory.helpers import *
+from webserver.src.instruments.guitar import Guitar
+from webserver.src.theory.helpers import *
 import copy
 
 class APIGuitar(Guitar):

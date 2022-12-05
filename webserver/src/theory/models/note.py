@@ -1,4 +1,4 @@
-from src.theory import ALL_NOTES
+from webserver.src.theory import ALL_NOTES
 
 class Note():
 

@@ -1,5 +1,5 @@
 from . import Note
-from src.theory.helpers import get_next_note_in_scale, get_note_from_established_piano_roll
+from webserver.src.theory.helpers import get_next_note_in_scale, get_note_from_established_piano_roll
 
 class Scale():
     def __init__(self, root_note: Note, steps: list, notes: list):

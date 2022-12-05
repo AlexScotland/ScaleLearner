@@ -1,4 +1,4 @@
-from src.theory.models import Note
+from webserver.src.theory.models import Note
 
 class Chord():
     

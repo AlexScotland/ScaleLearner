@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 from webserver.instruments.api_guitar import APIGuitar
-from src.theory.models import Note, Chord
+from webserver.src.theory.models import Note, Chord
 
 guitar_blueprint = Blueprint('api', __name__, url_prefix='/api')
 

@@ -1,6 +1,6 @@
-from src.theory.interfaces import IKey
-from src.theory.models import Note, Chord
-from src.theory.helpers import *
+from webserver.src.theory.interfaces import IKey
+from webserver.src.theory.models import Note, Chord
+from webserver.src.theory.helpers import *
 
 class Key(IKey):
 

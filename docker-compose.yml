@@ -1,0 +1,16 @@
+version: '3'
+services:
+    backend:
+      build: 
+        context: ./build/
+        dockerfile: guitar_bot
+      security_opt:
+        - seccomp:unconfined
+      ports:
+        - "80:5000"
+      networks:
+        - internalNetwork
+      volumes:
+        - "./webserver/:/app/webserver/"
+networks:
+  internalNetwork:

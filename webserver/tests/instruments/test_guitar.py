@@ -1,5 +1,5 @@
-from src.instruments.guitar import Guitar, settings
-from src.theory.models import Note, Chord
+from webserver.src.instruments.guitar import Guitar, settings
+from webserver.src.theory.models import Note, Chord
 import pytest
 
 def test_creating_guitar():

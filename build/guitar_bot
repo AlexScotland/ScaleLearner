@@ -13,6 +13,7 @@ RUN apt-get update
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
+ENV FLASK_APP /app/webserver/main.py
 
 # CMD tail -f /dev/null
 ENTRYPOINT [ "flask"]
